@@ -57,7 +57,8 @@ export const CardContainer = ({
           containerClassName
         )}
         style={{
-          padding: "0 12px 0 12px",
+          paddingLeft: "12px",
+          paddingRight: "12px",
         }}
       >
         <div
