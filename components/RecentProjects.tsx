@@ -56,7 +56,7 @@ const RecentProjects = () => {
                   <div className="flex items-center justify-between mt-7 mb-3 gap-10 px-3 md:px-0">
                     {/* Source Code */}
                     {item.github && (
-                      <div className="flex justify-center items-center cursor-pointer px-3 md:px-0">
+                      <div className="flex justify-center items-center cursor-pointer">
                         <Link
                           href={item.github}
                           target="_blank"
