@@ -25,7 +25,7 @@ const RecentProjects = () => {
                 <CardItem translateZ={-50}>
                   <div
                     className="relative w-full h-72 overflow-hidden lg:rounded-3xl px-3 md:px-0"
-                    style={{ backgroundColor: "#13162D" }}
+                    
                   >
                     <img src={item.img} alt="bgimg" />
                   </div>
@@ -60,7 +60,7 @@ const RecentProjects = () => {
                         <Link
                           href={item.github}
                           target="_blank"
-                          className="flex lg:text-xl md:text-xs text-sm text-purple px-3 md:px-0"
+                          className="flex lg:text-xl md:text-xs text-sm text-purple"
                         >
                           GitHub
                           <FaLocationArrow className="ms-3" color="#CBACF9" />
