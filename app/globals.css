@@ -83,3 +83,29 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+
+  /* Scrollbar styling for WebKit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #663399; /* Scrollbar thumb color */
+  border-radius: 10px; /* Round the edges of the scrollbar thumb */
+  border: 3px solid #1a1a2e; /* Adds space between the thumb and the edge */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #532b7d; /* Thumb color when hovering */
+}
+
+/* Firefox scrollbar styling */
+html {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #624b84 #1a1a2e; /* thumb color and track color */
+}
