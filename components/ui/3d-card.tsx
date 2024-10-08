@@ -56,6 +56,9 @@ export const CardContainer = ({
           "py-20 flex items-center justify-center",
           containerClassName
         )}
+        style={{
+          padding: "0 12px 0 12px",
+        }}
       >
         <div
           ref={containerRef}
