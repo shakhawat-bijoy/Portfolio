@@ -103,6 +103,14 @@ export const projects = [
     link: "https://blue-apple-ten.vercel.app/",
     github: "https://github.com/shakhawat-bijoy/apple",
   },
+  {
+    id: 5,
+    title: "Garicht Restaurants",
+    img: "https://i.ibb.co.com/k8GQjZV/gericht.webp",
+    des: "Gericht - Minimal Restaurants Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
+    link: "https://gericht-one.vercel.app/",
+    github: "https://github.com/shakhawat-bijoy/Gericht",
+  },
 ];
 
 export const testimonials = [
