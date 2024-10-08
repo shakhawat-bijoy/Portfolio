@@ -20,11 +20,11 @@ const RecentProjects = () => {
           >
             {/* Use the new 3D Card structure */}
             <CardContainer containerClassName="card-3d-container">
-              <CardBody className="relative  px-2 md:px-0 ">
+              <CardBody className="relative px-3 md:px-0">
                 {/* Background image */}
                 <CardItem translateZ={-50}>
                   <div
-                    className="relative w-full h-72 overflow-hidden lg:rounded-3xl"
+                    className="relative w-full h-72 overflow-hidden lg:rounded-3xl px-3 md:px-0"
                     style={{ backgroundColor: "#13162D" }}
                   >
                     <img src={item.img} alt="bgimg" />
@@ -33,7 +33,7 @@ const RecentProjects = () => {
 
                 {/* Project title */}
                 <CardItem translateZ={100}>
-                  <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 md:mt-5 mt-2">
+                  <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 md:mt-5 mt-2 px-3 md:px-0">
                     {item.title}
                   </h1>
                 </CardItem>
@@ -41,7 +41,7 @@ const RecentProjects = () => {
                 {/* Project description */}
                 <CardItem translateZ={80}>
                   <p
-                    className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-1 md:mt-2"
+                    className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-1 md:mt-2 px-3 md:px-0"
                     style={{
                       color: "#BEC1DD",
                       margin: "1vh 0",
@@ -53,18 +53,18 @@ const RecentProjects = () => {
 
                 {/* Tech icons and live site link */}
                 <CardItem translateZ={70}>
-                  <div className="flex items-center justify-between mt-7 mb-3 gap-10 ">
+                  <div className="flex items-center justify-between mt-7 mb-3 gap-10 px-3 md:px-0">
                     {/* Source Code */}
                     {item.github && (
-                      <div className="flex justify-center items-center cursor-pointer">
+                      <div className="flex justify-center items-center cursor-pointer px-3 md:px-0">
                         <Link
                           href={item.github}
                           target="_blank"
-                          className="flex lg:text-xl md:text-xs text-sm text-purple "
+                          className="flex lg:text-xl md:text-xs text-sm text-purple px-3 md:px-0"
                         >
                           GitHub
+                          <FaLocationArrow className="ms-3" color="#CBACF9" />
                         </Link>
-                        <FaLocationArrow className="ms-3" color="#CBACF9" />
                       </div>
                     )}
 
