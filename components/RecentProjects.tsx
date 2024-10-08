@@ -23,10 +23,7 @@ const RecentProjects = () => {
               <CardBody className="relative px-3 md:px-0">
                 {/* Background image */}
                 <CardItem translateZ={-50}>
-                  <div
-                    className="relative w-full h-72 overflow-hidden lg:rounded-3xl px-3 md:px-0"
-                    
-                  >
+                  <div className="relative w-full h-72 overflow-hidden lg:rounded-3xl px-3 md:px-0">
                     <img src={item.img} alt="bgimg" />
                   </div>
                 </CardItem>
@@ -60,7 +57,7 @@ const RecentProjects = () => {
                         <Link
                           href={item.github}
                           target="_blank"
-                          className="flex lg:text-xl md:text-xs text-sm text-purple"
+                          className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
                         >
                           GitHub
                           <FaLocationArrow className="ms-3" color="#CBACF9" />
@@ -74,11 +71,11 @@ const RecentProjects = () => {
                         <Link
                           href={item.link}
                           target="_blank"
-                          className="flex lg:text-xl md:text-xs text-sm text-purple "
+                          className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
                         >
                           Live Site
+                          <FaLocationArrow className="ms-3" color="#CBACF9" />
                         </Link>
-                        <FaLocationArrow className="ms-3" color="#CBACF9" />
                       </div>
                     )}
                   </div>
