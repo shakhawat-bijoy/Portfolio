@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const RecentProjects = () => {
   return (
-    <div className="md:py-20 py-16">
+    <div className="md:py-20 py-16" id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
@@ -20,7 +20,7 @@ const RecentProjects = () => {
           >
             {/* Use the new 3D Card structure */}
             <CardContainer containerClassName="card-3d-container">
-              <CardBody className="relative">
+              <CardBody className="relative  px-2 md:px-0 ">
                 {/* Background image */}
                 <CardItem translateZ={-50}>
                   <div
