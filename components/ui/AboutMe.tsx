@@ -85,10 +85,10 @@ export default function AnimatedModalDemo() {
             </div>
             <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-full mx-auto">
               <p className="">
-                I'm a web developer dedicated to crafting beautiful and joyful
-                digital experiences. My passion for design drives me to create
-                engaging interfaces that delight users. Beyond my work, I enjoy
-                traveling, which inspires my creativity and broadens my
+                I&apos;m a web developer dedicated to crafting beautiful and
+                joyful digital experiences. My passion for design drives me to
+                create engaging interfaces that delight users. Beyond my work, I
+                enjoy traveling, which inspires my creativity and broadens my
                 perspective. Exploring new places and cultures fuels my passion
                 for design and keeps my ideas fresh.{" "}
               </p>
