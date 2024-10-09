@@ -9,7 +9,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I prioritize client collaboration, fostering open communication",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -106,10 +106,18 @@ export const projects = [
   {
     id: 5,
     title: "Garicht Restaurants",
-    img: "https://i.ibb.co.com/k8GQjZV/gericht.webp",
     des: "Gericht - Minimal Restaurants Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
+    img: "https://i.ibb.co.com/k8GQjZV/gericht.webp",
     link: "https://gericht-one.vercel.app/",
     github: "https://github.com/shakhawat-bijoy/Gericht",
+  },
+  {
+    id: 6,
+    title: "Hekto E-Commerce",
+    des: "Hekto - Functional eCommerce Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
+    img: "https://i.ibb.co.com/MBW0L3R/Hekto.webp",
+    link: "https://hekto-blue.vercel.app/",
+    github: "https://github.com/shakhawat-bijoy/Hektot",
   },
 ];
 
