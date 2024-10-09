@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function AnimatedModalDemo() {
+export default function AboutMe() {
   const images = [
     {
       id: 1,
@@ -35,7 +35,7 @@ export default function AnimatedModalDemo() {
   ];
 
   return (
-    <div className="py-4 flex items-center justify-center">
+    <div className="pt-6 flex items-center justify-center">
       <Modal>
         <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
@@ -71,13 +71,13 @@ export default function AnimatedModalDemo() {
                     rotate: 0,
                     zIndex: 100,
                   }}
-                  className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
+                  className="rounded-lg -mr-4 mt-4 p-0.5 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
                 >
                   <Image
                     src={image.img} // Correctly reference the image URL
                     alt="bali images"
-                    width={500}
-                    height={500}
+                    width={800}
+                    height={800}
                     className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
                   />
                 </motion.div>
@@ -87,21 +87,13 @@ export default function AnimatedModalDemo() {
               <p className="">
                 I&apos;m a web developer dedicated to crafting beautiful and
                 joyful digital experiences. My passion for design drives me to
-                create engaging interfaces that delight users. Beyond my work, I
-                enjoy traveling, which inspires my creativity and broadens my
-                perspective. Exploring new places and cultures fuels my passion
-                for design and keeps my ideas fresh.{" "}
+                create engaging interfaces that delight users.{" "}
               </p>
               <p className="text-purple">
-                In addition to traveling, I have a love for gaming and music.
-                Gaming not only provides entertainment but also enhances my
-                problem-solving skills and creativity, while music enriches my
-                life and motivates me during work. I believe that these diverse
-                interests contribute to my approach as a developer, allowing me
-                to infuse joy and creativity into every project. Whether I’m
-                designing a website or playing a game, I aim to create
-                experiences that resonate with people and bring a smile to their
-                faces.
+                Beyond my work, I enjoy traveling, which inspires my creativity
+                and broadens my perspective. Exploring new places and cultures
+                fuels my passion for design and keeps my ideas fresh. In
+                addition to traveling, I have a love for gaming and music.
               </p>
             </div>
           </ModalContent>

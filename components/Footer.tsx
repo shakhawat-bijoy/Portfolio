@@ -1,8 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
-import Link from "next/link";
-import AnimatedModalDemo from "@/components/ui/AboutMe";
+import AboutMe from "@/components/ui/AboutMe";
 
 const Footer = () => {
   return (
@@ -34,7 +33,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <AnimatedModalDemo />
+      <AboutMe />
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center relative z-10">
         <p className="md:text-base text-sm md:font-normal font-light">
