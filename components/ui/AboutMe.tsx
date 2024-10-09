@@ -14,19 +14,19 @@ export default function AboutMe() {
   const images = [
     {
       id: 1,
-      img: "https://i.ibb.co.com/824XmSF/1716723242132.jpg",
+      img: "https://i.ibb.co.com/bByPBRL/bijoy1.webp",
     },
     {
       id: 2,
-      img: "https://i.ibb.co.com/Zz6zZJN/1707907716334.jpg",
+      img: "https://i.ibb.co.com/xz7GCKk/bijoy3.webp",
     },
     {
       id: 3,
-      img: "https://i.ibb.co.com/wQTbnYG/IMG-20231215-160959.jpg",
+      img: "https://i.ibb.co.com/kJkRd2s/bijoy5.webp",
     },
     {
       id: 4,
-      img: "https://i.ibb.co.com/ZHxZhLT/image1.jpg",
+      img: "https://i.ibb.co.com/5L2fsdr/bijoy2.webp",
     },
     {
       id: 5,
