@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;
@@ -83,6 +83,11 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+/* html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  } */
 
 
   /* Scrollbar styling for WebKit-based browsers (Chrome, Safari, Edge) */
@@ -108,4 +113,6 @@
 html {
   scrollbar-width: thin; /* Makes the scrollbar thinner */
   scrollbar-color: #624b84 #1a1a2e; /* thumb color and track color */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
