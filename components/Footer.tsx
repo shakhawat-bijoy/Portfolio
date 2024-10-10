@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import AboutMe from "@/components/ui/AboutMe";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -37,7 +38,10 @@ const Footer = () => {
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center relative z-10">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Shakhawat Bijoy
+          Copyright © 2024{" "}
+          <Link href="https://bijoy-shakhawat.vercel.app/" target="_blank">
+            Shakhawat Bijoy
+          </Link>
         </p>
 
         <div className="flex items-center md:gap-3 gap-6 mt-5 md:mt-0">
