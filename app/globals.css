@@ -68,7 +68,8 @@
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border;
+    scroll-behavior: smooth; /* Lightweight smooth scrolling */
   }
   body {
     @apply bg-background text-foreground;
@@ -84,32 +85,27 @@
   }
 }
 
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-  /* Scrollbar styling for WebKit-based browsers (Chrome, Safari, Edge) */
+/* Optimize Scrollbar Styling for better performance */
 ::-webkit-scrollbar {
-  width: 12px; /* Adjust width of the scrollbar */
+  width: 8px; /* Reducing scrollbar width to make it lighter */
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a2e; /* Background of the scrollbar track */
+  background: #1a1a2e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #663399; /* Scrollbar thumb color */
-  border-radius: 10px; /* Round the edges of the scrollbar thumb */
-  border: 3px solid #1a1a2e; /* Adds space between the thumb and the edge */
+  background-color: #663399;
+  border-radius: 8px; /* Slightly smaller and rounder */
+  border: 2px solid #1a1a2e;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #532b7d; /* Thumb color when hovering */
+  background-color: #532b7d;
 }
 
-/* Firefox scrollbar styling */
+/* Simplified Firefox scrollbar styling */
 html {
-  scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: #624b84 #1a1a2e; /* thumb color and track color */
+  scrollbar-width: thin;
+  scrollbar-color: #624b84 #1a1a2e;
 }
