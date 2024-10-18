@@ -4,8 +4,11 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { CardContainer, CardBody, CardItem } from "./ui/3d-card";
 import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
-const RecentProjects = () => {
+// Memoize the component to prevent unnecessary re-renders
+const RecentProjects = React.memo(() => {
   return (
     <div className="md:py-20 py-16" id="projects">
       <h1 className="heading">
@@ -24,7 +27,7 @@ const RecentProjects = () => {
                 {/* Background image */}
                 <CardItem translateZ={-50}>
                   <div className="relative w-full h-72 overflow-hidden lg:rounded-3xl px-3 md:px-0">
-                    <img src={item.img} alt="bgimg" />
+                    <img src={item.img} alt="bgimg" loading="lazy" />
                   </div>
                 </CardItem>
 
@@ -37,13 +40,7 @@ const RecentProjects = () => {
 
                 {/* Project description */}
                 <CardItem translateZ={80}>
-                  <p
-                    className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-1 md:mt-2 px-3 md:px-0"
-                    style={{
-                      color: "#BEC1DD",
-                      margin: "1vh 0",
-                    }}
-                  >
+                  <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-1 md:mt-2 px-3 md:px-0 text-neutral-500">
                     {item.des}
                   </p>
                 </CardItem>
@@ -53,30 +50,26 @@ const RecentProjects = () => {
                   <div className="flex items-center justify-between mt-7 mb-3 gap-10 px-3 md:px-0">
                     {/* Source Code */}
                     {item.github && (
-                      <div className="flex justify-center items-center cursor-pointer">
-                        <Link
-                          href={item.github}
-                          target="_blank"
-                          className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
-                        >
-                          GitHub
-                          <FaLocationArrow className="ms-3" color="#CBACF9" />
-                        </Link>
-                      </div>
+                      <Link
+                        href={item.github}
+                        target="_blank"
+                        className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
+                      >
+                        GitHub
+                        <FaLocationArrow className="ms-3" color="#CBACF9" />
+                      </Link>
                     )}
 
                     {/* Live site link */}
                     {item.link && (
-                      <div className="flex justify-center items-center cursor-pointer">
-                        <Link
-                          href={item.link}
-                          target="_blank"
-                          className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
-                        >
-                          Live Site
-                          <FaLocationArrow className="ms-3" color="#CBACF9" />
-                        </Link>
-                      </div>
+                      <Link
+                        href={item.link}
+                        target="_blank"
+                        className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
+                      >
+                        Live Site
+                        <FaLocationArrow className="ms-3" color="#CBACF9" />
+                      </Link>
                     )}
                   </div>
                 </CardItem>
@@ -87,6 +80,6 @@ const RecentProjects = () => {
       </div>
     </div>
   );
-};
+});
 
 export default RecentProjects;

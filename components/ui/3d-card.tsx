@@ -16,10 +16,14 @@ const MouseEnterContext = createContext<
 
 export const CardContainer = ({
   children,
+  title,
+  href,
   className,
   containerClassName,
 }: {
-  children?: React.ReactNode;
+  children: React.ReactNode;
+  title?: string;
+  href?: string;
   className?: string;
   containerClassName?: string;
 }) => {
@@ -52,9 +56,6 @@ export const CardContainer = ({
           "py-20 flex items-center justify-center",
           containerClassName
         )}
-        style={{
-          perspective: "1000px",
-        }}
       >
         <div
           ref={containerRef}
