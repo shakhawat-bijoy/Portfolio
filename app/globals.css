@@ -81,7 +81,7 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply md:font-bold font-semibold text-2xl md:text-5xl text-center;
   }
 }
 
