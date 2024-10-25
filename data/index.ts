@@ -188,27 +188,27 @@ export const companies = [
 ];
 
 export const workExperience = [
+  // {
+  //   id: 1,
+  //   title: "Buy High", //"Frontend Engineer Intern",
+  //   desc: "This will be my dream project, I will build it later.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "https://i.ibb.co.com/Rvcxs1t/buyhigh.webp",
+  // },
   {
-    id: 1,
-    title: "Buy High",//"Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "https://i.ibb.co.com/Rvcxs1t/buyhigh.webp",
+    id: 2,
+    title: "«Developer» Voting System Management",
+    desc: "A C++ console-based online voting system enabling user registration, voting, election winner display, and an admin panel for management.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "https://i.ibb.co.com/tZgrB1x/evm.webp",
   },
-  // {
-  //   id: 2,
-  //   title: "Mobile App Dev - JSM Tech",
-  //   desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-  //   className: "md:col-span-2", // change to md:col-span-2
-  //   thumbnail: "/exp2.svg",
-  // },
-  // {
-  //   id: 3,
-  //   title: "Freelance App Dev Project",
-  //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-  //   className: "md:col-span-2", // change to md:col-span-2
-  //   thumbnail: "/exp3.svg",
-  // },
+  {
+    id: 3,
+    title: "Intern Developer",
+    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "https://i.ibb.co.com/d0S4S7B/itransition.webp",
+  },
   // {
   //   id: 4,
   //   title: "Lead Frontend Developer",
