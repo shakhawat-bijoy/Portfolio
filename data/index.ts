@@ -197,7 +197,7 @@ export const workExperience = [
   // },
   {
     id: 2,
-    title: "«Developer» Voting System Management",
+    title: "Developer",
     desc: "A C++ console-based online voting system enabling user registration, voting, election winner display, and an admin panel for management.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "https://i.ibb.co.com/tZgrB1x/evm.webp",
