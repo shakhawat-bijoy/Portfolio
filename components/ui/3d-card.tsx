@@ -16,14 +16,10 @@ const MouseEnterContext = createContext<
 
 export const CardContainer = ({
   children,
-  title,
-  href,
   className,
   containerClassName,
 }: {
-  children: React.ReactNode;
-  title?: string;
-  href?: string;
+  children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
 }) => {
