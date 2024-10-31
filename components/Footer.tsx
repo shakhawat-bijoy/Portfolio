@@ -35,7 +35,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex items-center justify-center md:gap-10 gap-4">
         <AboutMe />
         <Certificate />
       </div>

@@ -22,7 +22,7 @@ export default function Certificate() {
     <div className="pt-6 flex items-center justify-center">
       <Modal>
         <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 text-sm md:text-base">
             Certificate 📃
           </span>
           <div className="planeIcon -translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -58,12 +58,12 @@ export default function Certificate() {
                     alt="certificate"
                     width={700}
                     height={800}
-                    className="rounded-lg w-[20rem] md:w-[32rem] h-96 object-contain"
+                    className="rounded-lg w-full md:w-[32rem] h-72 md:h-[32rem] object-contain"
                   />
                 </motion.div>
               ))}
             </div>
-            <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-full mx-auto">
+            <div className="py-6 flex flex-wrap gap-x-2 gap-y-6 items-start justify-start max-w-full mx-auto">
               <li>
                 Front-end{" "}
                 <span className="font-bold text-purple">
