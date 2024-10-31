@@ -112,8 +112,7 @@ export const Header = () => {
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
         I build beautiful web with the latest technologies and frameworks.
-        I'm a passionate developers who love to build
-        amazing projects.
+        I&apos;m a passionate developers who love to build amazing projects.
       </p>
     </div>
   );
