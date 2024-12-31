@@ -21,7 +21,7 @@ const Home = () => {
         <Grid />
         <RecentProjects />
         {/* <Clients /> */}
-        <HeroParallaxDemo/>
+        {/* <HeroParallaxDemo/> */}
         <Experience />
         <Approach />
         <Footer />

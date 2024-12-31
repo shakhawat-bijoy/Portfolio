@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="https://i.ibb.co.com/1qczhz8/portfolio.webp"
+          href="https://imageshack.com/i/pnwTDbj3j"
           sizes="any"
         />
       </head>
