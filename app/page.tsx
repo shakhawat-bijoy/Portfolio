@@ -20,7 +20,7 @@ const Home = () => {
     // Simulate a loading period
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500); // 2 seconds delay for the loading screen
+    }, 1000); // 2 seconds delay for the loading screen
 
     return () => clearTimeout(timer); // Cleanup the timer on component unmount
   }, []);
