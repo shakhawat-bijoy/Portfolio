@@ -33,6 +33,10 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+
+    /* Add animation duration variables */
+    --scroll-duration: 500ms; /* Scroll duration in ms */
+    --ease: cubic-bezier(0.25, 0.8, 0.25, 1); /* Ease for animations */
   }
 
   .dark {
@@ -64,30 +68,69 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
-}
 
-@layer base {
+  /* Enable smooth scrolling across the entire site */
   * {
     @apply border-border;
     scroll-behavior: smooth; /* Lightweight smooth scrolling */
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button {
     @apply active:outline-none;
+  }
+
+  /* Sliding up animation (added for Apple-like smoothness) */
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-up {
+    animation: slide-up var(--scroll-duration) var(--ease);
   }
 }
 
 @layer utilities {
+  /* Heading styling for consistency */
   .heading {
     @apply md:font-bold font-semibold text-2xl md:text-5xl text-center;
   }
+
+  /* Smooth entrance animations for any element */
+  .smooth-appear {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  /* Utility for sliding elements on scroll */
+  .scroll-fade {
+    animation: fade-in 1s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
 
-/* Optimize Scrollbar Styling for better performance */
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px; /* Reducing scrollbar width to make it lighter */
+  width: 8px; /* Thin scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -96,7 +139,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #663399;
-  border-radius: 8px; /* Slightly smaller and rounder */
+  border-radius: 8px;
   border: 2px solid #1a1a2e;
 }
 
@@ -104,7 +147,6 @@
   background-color: #532b7d;
 }
 
-/* Simplified Firefox scrollbar styling */
 html {
   scrollbar-width: thin;
   scrollbar-color: #624b84 #1a1a2e;
