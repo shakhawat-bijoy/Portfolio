@@ -14,23 +14,23 @@ export default function AboutMe() {
   const images = [
     {
       id: 1,
-      img: "https://i.ibb.co.com/bByPBRL/bijoy1.webp",
+      img: "https://ik.imagekit.io/abpj7jifz/1731832259415.jpg?updatedAt=1739535598408",
     },
     {
       id: 2,
-      img: "https://i.ibb.co.com/xz7GCKk/bijoy3.webp",
+      img: "https://ik.imagekit.io/abpj7jifz/IMG_2809.HEIC?updatedAt=1739534702559",
     },
     {
       id: 3,
-      img: "https://i.ibb.co.com/kJkRd2s/bijoy5.webp",
+      img: "https://ik.imagekit.io/abpj7jifz/1683304015289.jpg?updatedAt=1739536140040",
     },
     {
       id: 4,
-      img: "https://i.ibb.co.com/5L2fsdr/bijoy2.webp",
+      img: "https://ik.imagekit.io/abpj7jifz/1735648522677.jpg?updatedAt=1739535487947",
     },
     {
       id: 5,
-      img: "https://i.ibb.co.com/1qczhz8/portfolio.webp",
+      img: "https://ik.imagekit.io/abpj7jifz/web%20developer%201.jpg?updatedAt=1739536562201",
     },
   ];
 

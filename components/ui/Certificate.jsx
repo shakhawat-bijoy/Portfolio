@@ -14,7 +14,7 @@ export default function Certificate() {
   const images = [
     {
       id: 1,
-      img: "https://i.ibb.co.com/Yk5K7nR/certificate.webp",
+      img: "https://ik.imagekit.io/abpj7jifz/certificate.png?updatedAt=1739537899172",
     },
   ];
 

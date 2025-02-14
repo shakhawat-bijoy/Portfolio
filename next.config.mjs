@@ -14,6 +14,16 @@ const nextConfig = {
         hostname: "i.ibb.co.com",
         pathname: "/**", // Allow all paths from i.ibb.com
       },
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+        pathname: "/**", // Allow all paths from i.ibb.com
+      },
+      {
+        protocol: "https",
+        hostname: "imageshack.com",
+        pathname: "/**", // Allow all paths from i.ibb.com
+      },
     ],
   },
 };
