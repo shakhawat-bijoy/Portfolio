@@ -108,8 +108,8 @@ export const projects = [
     title: "Garicht Restaurants",
     des: "Gericht - Minimal Restaurants Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
     img: "https://imageshack.com/i/pnSp8JyDp",
-    link: "https://gericht-one.vercel.app/",
-    github: "https://github.com/shakhawat-bijoy/Gericht",
+    link: "https://smuct-web.vercel.app/",
+    github: "https://github.com/shakhawat-bijoy/smuct-web",
   },
   {
     id: 6,
@@ -118,6 +118,14 @@ export const projects = [
     img: "https://imageshack.com/i/pnVk8xhWp",
     link: "https://hekto-blue.vercel.app/",
     github: "https://github.com/shakhawat-bijoy/Hektot",
+  },
+  {
+    id: 6,
+    title: "Project Management",
+    des: "Project Management System is a web-based application developed using React.js, Node.js, and MongoDB. It is designed to help teams manage their projects, tasks, and deadlines efficiently.",
+    img: "https://ik.imagekit.io/abpj7jifz/Screenshot%202025-02-25%20095550.png?updatedAt=1740455811854",
+    link: "https://it-final-project.vercel.app/",
+    github: "https://github.com/shakhawat-bijoy/itProject",
   },
 ];
 
