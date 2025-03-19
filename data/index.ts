@@ -204,13 +204,13 @@ export const workExperience = [
   //   thumbnail: "https://i.ibb.co.com/Rvcxs1t/buyhigh.webp",
   // },
 
-  {
-    id: 2,
-    title: "Intern Developer",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "https://imageshack.com/i/pmVQuXq5p",
-  },
+  // {
+  //   id: 2,
+  //   title: "Intern Developer",
+  //   desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "https://imageshack.com/i/pmVQuXq5p",
+  // },
   {
     id: 3,
     title: "Developer",
