@@ -120,12 +120,20 @@ export const projects = [
     github: "https://github.com/shakhawat-bijoy/Hektot",
   },
   {
-    id: 6,
+    id: 7,
     title: "Project Management",
     des: "Project Management System is a web-based application developed using React.js, Node.js, and MongoDB. It is designed to help teams manage their projects, tasks, and deadlines efficiently.",
     img: "https://ik.imagekit.io/abpj7jifz/Screenshot%202025-02-25%20095550.png?updatedAt=1740455811854",
     link: "https://it-final-project.vercel.app/",
     github: "https://github.com/shakhawat-bijoy/itProject",
+  },
+  {
+    id: 8,
+    title: "Will Upload Soon",
+    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    img: "https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif",
+    link: "",
+    github: "",
   },
 ];
 
