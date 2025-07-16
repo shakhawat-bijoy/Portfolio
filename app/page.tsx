@@ -12,6 +12,7 @@ import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Loading from "@/components/Loading"; // Adjust the path if needed
+import { TracingBeamDemo } from "@/components/TracingBeamDemo";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ const Home = () => {
         {/* <HeroParallaxDemo/> */}
         <Experience />
         <Approach />
+        {/* <TracingBeamDemo/> */}
         <Footer />
       </div>
     </main>

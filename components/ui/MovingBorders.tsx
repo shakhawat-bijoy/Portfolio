@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+
+import React, { useRef, useCallback, useMemo } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -7,8 +8,18 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
 import { cn } from "@/lib/utils";
+
+interface ButtonProps {
+  borderRadius?: string;
+  children: React.ReactNode;
+  as?: React.ElementType;
+  containerClassName?: string;
+  borderClassName?: string;
+  duration?: number;
+  className?: string;
+  [key: string]: any;
+}
 
 export function Button({
   borderRadius = "1.75rem",
@@ -16,39 +27,35 @@ export function Button({
   as: Component = "button",
   containerClassName,
   borderClassName,
-  duration,
+  duration = 2000,
   className,
   ...otherProps
-}: {
-  borderRadius?: string;
-  children: React.ReactNode;
-  as?: any;
-  containerClassName?: string;
-  borderClassName?: string;
-  duration?: number;
-  className?: string;
-  [key: string]: any;
-}) {
+}: ButtonProps) {
+  const borderRadiusStyle = useMemo(() => ({
+    borderRadius: borderRadius,
+  }), [borderRadius]);
+
+  const innerBorderRadius = useMemo(() => 
+    `calc(${borderRadius} * 0.96)`, [borderRadius]
+  );
+
   return (
     <Component
       className={cn(
-        // remove h-16 w-40, add  md:col-span-2
         "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
         containerClassName
       )}
-      style={{
-        borderRadius: borderRadius,
-      }}
+      style={borderRadiusStyle}
       {...otherProps}
     >
       <div
-        className="absolute inset-0 rounde-[1.75rem]"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
+        className="absolute inset-0"
+        style={{ borderRadius: innerBorderRadius }}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(#CBACF9_40%,transparent_60%)]",
+              "h-20 w-20 opacity-80 bg-[radial-gradient(#CBACF9_40%,transparent_60%)]",
               borderClassName
             )}
           />
@@ -57,12 +64,10 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased transition-all duration-200 hover:bg-slate-800/[0.8]",
           className
         )}
-        style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
-        }}
+        style={{ borderRadius: innerBorderRadius }}
       >
         {children}
       </div>
@@ -70,38 +75,58 @@ export function Button({
   );
 }
 
-export const MovingBorder = ({
-  children,
-  duration = 2000,
-  rx,
-  ry,
-  ...otherProps
-}: {
+interface MovingBorderProps {
   children: React.ReactNode;
   duration?: number;
   rx?: string;
   ry?: string;
   [key: string]: any;
-}) => {
-  const pathRef = useRef<any>();
+}
+
+export const MovingBorder = ({
+  children,
+  duration = 2000,
+  rx = "30%",
+  ry = "30%",
+  ...otherProps
+}: MovingBorderProps) => {
+  const pathRef = useRef<SVGRectElement>(null);
   const progress = useMotionValue<number>(0);
 
-  useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
+  // Memoize the animation callback for better performance
+  const animate = useCallback((time: number) => {
+    const path = pathRef.current;
+    if (!path) return;
+
+    const length = path.getTotalLength();
     if (length) {
       const pxPerMillisecond = length / duration;
       progress.set((time * pxPerMillisecond) % length);
     }
+  }, [duration, progress]);
+
+  useAnimationFrame(animate);
+
+  // Optimize transforms with better error handling
+  const x = useTransform(progress, (val) => {
+    const path = pathRef.current;
+    if (!path) return 0;
+    try {
+      return path.getPointAtLength(val).x;
+    } catch {
+      return 0;
+    }
   });
 
-  const x = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).x
-  );
-  const y = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).y
-  );
+  const y = useTransform(progress, (val) => {
+    const path = pathRef.current;
+    if (!path) return 0;
+    try {
+      return path.getPointAtLength(val).y;
+    } catch {
+      return 0;
+    }
+  });
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
 
@@ -132,6 +157,9 @@ export const MovingBorder = ({
           display: "inline-block",
           transform,
         }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
       >
         {children}
       </motion.div>

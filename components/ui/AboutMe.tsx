@@ -18,11 +18,11 @@ export default function AboutMe() {
     },
     {
       id: 2,
-      img: "https://ik.imagekit.io/abpj7jifz/IMG_2809.HEIC?updatedAt=1739534702559",
+      img: "https://ik.imagekit.io/abpj7jifz/1683304015289.jpg?updatedAt=1739536140040",
     },
     {
       id: 3,
-      img: "https://ik.imagekit.io/abpj7jifz/1683304015289.jpg?updatedAt=1739536140040",
+      img: "https://ik.imagekit.io/abpj7jifz/IMG_4548.JPG?updatedAt=1751082281461",
     },
     {
       id: 4,

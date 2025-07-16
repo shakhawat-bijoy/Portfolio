@@ -1,3 +1,4 @@
+import React, { useMemo } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
@@ -6,6 +7,18 @@ import Certificate from "@/components/ui/Certificate";
 import Link from "next/link";
 
 const Footer = () => {
+  // Memoize the email href to prevent string concatenation on every render
+  const emailHref = useMemo(() => "mailto:shakhawatbijoy1@gmail.com", []);
+  
+  // Memoize the copyright text to prevent string operations
+  const copyrightText = useMemo(() => `Copyright © ${new Date().getFullYear()} `, []);
+  
+  // Memoize the social media icon style to prevent recreation
+  const socialIconStyle = useMemo(() => 
+    "w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-gray-800 rounded-lg border border-gray-600",
+    []
+  );
+
   return (
     <footer className="w-full md:pt-20 pb-10 relative" id="contact">
       {/* background grid */}
@@ -14,6 +27,8 @@ const Footer = () => {
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-auto opacity-50"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -26,7 +41,7 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:shakhawatbijoy1@gmail.com">
+        <a href={emailHref}>
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -42,7 +57,7 @@ const Footer = () => {
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center relative z-10">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2025{" "}
+          {copyrightText}
           <Link href="https://bijoy-shakhawat.vercel.app/" target="_blank">
             Shakhawat Bijoy
           </Link>
@@ -55,9 +70,16 @@ const Footer = () => {
               href={info.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-gray-800 rounded-lg border border-gray-600"
+              className={socialIconStyle}
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
+              <img 
+                src={info.img} 
+                alt={`${info.id} social media icon`}
+                width={20} 
+                height={20}
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           ))}
         </div>
