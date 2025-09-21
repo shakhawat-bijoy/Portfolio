@@ -1,61 +1,122 @@
 "use client";
-
-import { useState, useEffect } from "react";
+import { Suspense, lazy, useState, useEffect } from "react";
 import { navItems } from "@/data";
 
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
-import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
-import Approach from "@/components/Approach";
-import Experience from "@/components/Experience";
-import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Loading from "@/components/Loading"; // Adjust the path if needed
-import { TracingBeamDemo } from "@/components/TracingBeamDemo";
+import Loading from "@/components/Loading";
 
-const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
+// Lazy load all components
+const LazyHero = lazy(() => import("@/components/Hero"));
+const LazyGrid = lazy(() => import("@/components/Grid"));
+const LazyRecentProjects = lazy(() => import("@/components/RecentProjects"));
+const LazyExperience = lazy(() => import("@/components/Experience"));
+const LazyApproach = lazy(() => import("@/components/Approach"));
+const LazyFooter = lazy(() => import("@/components/Footer"));
+
+// Client-only wrapper to prevent SSR issues
+const ClientOnly = ({
+  children,
+  fallback = <Loading />,
+}: {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}) => {
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Simulate a loading period
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000); // 2 seconds delay for the loading screen
-
-    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+    setIsClient(true);
   }, []);
 
-  // Show the loading component while the site is loading
-  if (isLoading) {
-    return <Loading />;
+  if (!isClient) {
+    return <>{fallback}</>;
   }
 
-  // Main content to render after loading is complete
+  return <>{children}</>;
+};
+
+// Main content component that loads all components together
+const MainContent = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-        <RecentProjects />
+
+        <LazyHero />
+        <LazyGrid />
+        <LazyRecentProjects />
         {/* <Clients /> */}
-        {/* <HeroParallaxDemo/> */}
-        <Experience />
-        <Approach />
+        <LazyExperience />
+        <LazyApproach />
         {/* <TracingBeamDemo/> */}
-        <Footer />
+        <LazyFooter />
       </div>
     </main>
   );
 };
 
+const Home = () => {
+  return (
+    <ClientOnly fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <MainContent />
+      </Suspense>
+    </ClientOnly>
+  );
+};
+
 export default Home;
 
+// "use client";
 
+// import { useState, useEffect } from "react";
+// import { navItems } from "@/data";
 
+// import Hero from "@/components/Hero";
+// import Grid from "@/components/Grid";
+// import Footer from "@/components/Footer";
+// import Clients from "@/components/Clients";
+// import Approach from "@/components/Approach";
+// import Experience from "@/components/Experience";
+// import RecentProjects from "@/components/RecentProjects";
+// import { FloatingNav } from "@/components/ui/FloatingNavbar";
+// import Loading from "@/components/Loading"; // Adjust the path if needed
 
+// const Home = () => {
+//   const [isLoading, setIsLoading] = useState(true);
 
+//   useEffect(() => {
+//     // Simulate a loading period
+//     const timer = setTimeout(() => {
+//       setIsLoading(false);
+//     }, 1000); // 2 seconds delay for the loading screen
+
+//     return () => clearTimeout(timer); // Cleanup the timer on component unmount
+//   }, []);
+
+//   // Show the loading component while the site is loading
+//   if (isLoading) {
+//     return <Loading />;
+//   }
+
+//   // Main content to render after loading is complete
+//   return (
+//     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+//       <div className="max-w-7xl w-full">
+//         <FloatingNav navItems={navItems} />
+//         <Hero />
+//         <Grid />
+//         <RecentProjects />
+//         {/* <Clients /> */}
+//         <Experience />
+//         <Approach />
+//         {/* <TracingBeamDemo/> */}
+//         <Footer />
+//       </div>
+//     </main>
+//   );
+// };
+
+// export default Home;
 
 // "use client";
 // import { useState, useEffect } from "react";
