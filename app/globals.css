@@ -110,3 +110,19 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #624b84 #1a1a2e;
 }
+
+
+/* Add this to your existing globals.css file */
+
+@layer utilities {
+  .heading {
+    @apply md:font-bold font-semibold text-2xl md:text-5xl text-center;
+  }
+
+  /* Shimmer animation for loading skeletons */
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
