@@ -14,7 +14,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "https://ik.imagekit.io/abpj7jifz/IMG_4836.JPG?updatedAt=1751082331575",
+    img: "https://ik.imagekit.io/abpj7jifz/1750155377729.jpg?updatedAt=1751082160346",
     spareImg: "",
   },
   {
@@ -50,7 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a Dashboard using Shadcn",
+    title: "Currently building a Travel using MERN stack",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
