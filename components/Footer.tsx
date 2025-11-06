@@ -72,7 +72,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className={socialIconStyle}
             >
-              <img 
+              <img
                 src={info.img} 
                 alt={`${info.id} social media icon`}
                 width={20} 

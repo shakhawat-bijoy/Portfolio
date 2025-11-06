@@ -18,19 +18,19 @@ export default function AboutMe() {
     },
     {
       id: 2,
-      img: "https://ik.imagekit.io/abpj7jifz/1683304015289.jpg?updatedAt=1739536140040",
+      img: "https://ik.imagekit.io/abpj7jifz/web%20developer%201.jpg?updatedAt=1739536562201",
     },
     {
       id: 3,
-      img: "https://ik.imagekit.io/abpj7jifz/IMG_4548.JPG?updatedAt=1751082281461",
+      img: "https://ik.imagekit.io/abpj7jifz/IMG_5364.JPG?updatedAt=1751082369775",
     },
     {
       id: 4,
-      img: "https://ik.imagekit.io/abpj7jifz/1735648522677.jpg?updatedAt=1739535487947",
+      img: "https://ik.imagekit.io/abpj7jifz/IMG_5172.JPG?updatedAt=1752087957203",
     },
     {
       id: 5,
-      img: "https://ik.imagekit.io/abpj7jifz/web%20developer%201.jpg?updatedAt=1739536562201",
+      img: "https://ik.imagekit.io/abpj7jifz/1750155377729.jpg?updatedAt=1751082160346",
     },
   ];
 
@@ -75,7 +75,7 @@ export default function AboutMe() {
                 >
                   <Image
                     src={image.img} // Correctly reference the image URL
-                    alt="bali images"
+                    alt="images"
                     width={800}
                     height={800}
                     className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0"
