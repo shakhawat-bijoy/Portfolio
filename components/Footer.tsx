@@ -5,16 +5,17 @@ import MagicButton from "./MagicButton";
 import AboutMe from "@/components/ui/AboutMe";
 import Certificate from "@/components/ui/Certificate";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   // Memoize the email href to prevent string concatenation on every render
   const emailHref = useMemo(() => "mailto:shakhawatbijoy1@gmail.com", []);
-  
+
   // Memoize the copyright text to prevent string operations
   const copyrightText = useMemo(() => `Copyright © ${new Date().getFullYear()} `, []);
-  
+
   // Memoize the social media icon style to prevent recreation
-  const socialIconStyle = useMemo(() => 
+  const socialIconStyle = useMemo(() =>
     "w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-gray-800 rounded-lg border border-gray-600",
     []
   );
@@ -23,12 +24,12 @@ const Footer = () => {
     <footer className="w-full md:pt-20 pb-10 relative" id="contact">
       {/* background grid */}
       <div className="absolute left-0 bottom-0 w-full overflow-hidden">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-auto opacity-50"
-          loading="lazy"
-          decoding="async"
+          fill
+          style={{ objectFit: 'cover' }}
         />
       </div>
 
@@ -72,13 +73,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               className={socialIconStyle}
             >
-              <img
-                src={info.img} 
+              <Image
+                src={info.img}
                 alt={`${info.id} social media icon`}
-                width={20} 
+                width={20}
                 height={20}
-                loading="lazy"
-                decoding="async"
               />
             </a>
           ))}

@@ -1,5 +1,5 @@
 export const navItems = [
-  { name: "Home", link: "#home"},
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Approach", link: "#approach" },
@@ -258,5 +258,15 @@ export const socialMedia = [
     id: 3,
     img: "/facebook.svg",
     link: "https://www.facebook.com/bijoy1x",
+  },
+  {
+    id: 4,
+    img: "/whatsapp.svg",
+    link: "https://wa.me/8801704446708",
+  },
+  {
+    id: 5,
+    img: "/phone.svg",
+    link: "tel:+8801704446708",
   },
 ];
