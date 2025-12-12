@@ -73,14 +73,6 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Birds | My first NextJs App",
-    des: "Bird | Design & Development Studio. Grow your business with Bird, a design and Development Studio.",
-    img: "https://imageshack.com/i/pog5z89Mp",
-    link: "https://bird-agency.vercel.app/",
-    github: "https://github.com/shakhawat-bijoy/bird-agency",
-  },
-  {
-    id: 2,
     title: "Orebi E-Commerce",
     des: "Orebi - Minimal eCommerce Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
     img: "https://imageshack.com/i/poUxTigap",
@@ -88,7 +80,24 @@ export const projects = [
     github: "https://github.com/shakhawat-bijoy/Orebi",
   },
   {
+    id: 2,
+    title: "Birds | My first NextJs App",
+    des: "Bird | Design & Development Studio. Grow your business with Bird, a design and Development Studio.",
+    img: "https://imageshack.com/i/pog5z89Mp",
+    link: "https://bird-agency.vercel.app/",
+    github: "https://github.com/shakhawat-bijoy/bird-agency",
+  },
+
+  {
     id: 3,
+    title: "Dream Holidays - Your Dream Vacation",
+    des: "A web application that provides information about various destinations and travel packages. Users can search for destinations, view package details, and book travel packages.",
+    img: "https://ik.imagekit.io/abpj7jifz/Dream%20Holidays%20-%20Your%20Dream%20Vacation.webp?updatedAt=1762442364606",
+    link: "https://nomadic-eta.vercel.app/",
+    github: "https://github.com/shakhawat-bijoy/Travel-Agency",
+  },
+  {
+    id: 4,
     title: "Community",
     des: "Community apps serve as digital hubs where individuals converge to connect, collaborate, and share knowledge. They foster a sense of belonging by providing platforms for diverse interests and discussions.",
     img: "https://imageshack.com/i/pmjSHFMxp",
@@ -96,7 +105,7 @@ export const projects = [
     github: "https://github.com/shakhawat-bijoy/Community",
   },
   {
-    id: 4,
+    id: 5,
     title: "Animated Apple Iphone 3D Website",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "https://imageshack.com/i/pn4VQvjep",
@@ -104,7 +113,7 @@ export const projects = [
     github: "https://github.com/shakhawat-bijoy/apple",
   },
   {
-    id: 5,
+    id: 6,
     title: "Garicht Restaurants",
     des: "Gericht - Minimal Restaurants Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
     img: "https://imageshack.com/i/pnSp8JyDp",
@@ -112,7 +121,7 @@ export const projects = [
     github: "https://github.com/shakhawat-bijoy/smuct-web",
   },
   {
-    id: 6,
+    id: 7,
     title: "Hekto E-Commerce",
     des: "Hekto - Functional eCommerce Figma Template - It is easy to use this design, you can adapt it for any kind of products. There are a lot of space for the information. This design is a great decision, if you want to create ecommerce market in the modern way.",
     img: "https://imageshack.com/i/pnVk8xhWp",
@@ -127,14 +136,7 @@ export const projects = [
   //   link: "https://it-final-project.vercel.app/",
   //   github: "https://github.com/shakhawat-bijoy/itProject",
   // },
-  {
-    id: 7,
-    title: "Dream Holidays - Your Dream Vacation",
-    des: "A web application that provides information about various destinations and travel packages. Users can search for destinations, view package details, and book travel packages.",
-    img: "https://ik.imagekit.io/abpj7jifz/Dream%20Holidays%20-%20Your%20Dream%20Vacation.webp?updatedAt=1762442364606",
-    link: "https://heer-travels.vercel.app/",
-    github: "https://github.com/shakhawat-bijoy/Travel-Agency",
-  },
+
   {
     id: 8,
     title: "Will Upload Soon",
