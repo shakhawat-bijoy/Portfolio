@@ -38,8 +38,8 @@ const Hero = () => {
 
   // Memoize the download link attributes
   const resumeDownload = useMemo(() => ({
-    href: "/ShakhawatBijoy1.pdf",
-    download: "Shakhawat-Bijoy-Resume.pdf"
+    href: "/shakhawat-bijoy.pdf",
+    download: "Shakhawat-Bijoy.pdf"
   }), []);
 
   return (
