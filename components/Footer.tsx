@@ -1,15 +1,15 @@
 import React, { useMemo } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
-import { socialMedia } from "@/data";
+import { PortfolioContent } from "@/lib/content";
 import MagicButton from "./MagicButton";
 import AboutMe from "@/components/ui/AboutMe";
 import Certificate from "@/components/ui/Certificate";
 import Link from "next/link";
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = ({ socialMedia, footer }: { socialMedia: PortfolioContent["socialMedia"]; footer: PortfolioContent["footer"] }) => {
   // Memoize the email href to prevent string concatenation on every render
-  const emailHref = useMemo(() => "mailto:shakhawatbijoy1@gmail.com", []);
+  const emailHref = useMemo(() => `mailto:${footer.email}`, [footer.email]);
 
   // Memoize the copyright text to prevent string operations
   const copyrightText = useMemo(() => `Copyright © ${new Date().getFullYear()} `, []);
@@ -35,12 +35,10 @@ const Footer = () => {
 
       <div className="flex flex-col items-center relative z-10">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          {footer.heading}
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          {footer.description}
         </p>
         <a href={emailHref}>
           <MagicButton

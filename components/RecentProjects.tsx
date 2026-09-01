@@ -1,11 +1,11 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-import { projects } from "@/data";
+import { PortfolioContent } from "@/lib/content";
 import { CardContainer, CardBody, CardItem } from "./ui/3d-card";
 import Link from "next/link";
 
-const RecentProjects = () => {
+const RecentProjects = ({ projects }: { projects: PortfolioContent["projects"] }) => {
   return (
     <div className="md:py-20 py-16" id="projects">
       <h1 className="heading">

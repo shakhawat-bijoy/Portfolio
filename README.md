@@ -1,3 +1,17 @@
+## Portfolio CMS
+
+The public portfolio reads its content from MongoDB through `/api/content`. Copy `.env.example` to `.env.local`, set `MONGODB_URI`, `MONGODB_DB`, and a strong `ADMIN_PASSWORD`, then run `npm run dev`. Open `/admin` to edit and publish portfolio content. The values in `data/index.ts` are only used as first-run fallback/seed content when MongoDB has no document yet.
+
+### Vercel deployment
+
+1. Push this repository to GitHub. `.env.local`, `.next`, and `node_modules` are ignored by Git.
+2. Import the repository into Vercel. The detected framework should be Next.js, with the default build command `npm run build`.
+3. Add `MONGODB_URI`, `MONGODB_DB`, and `ADMIN_PASSWORD` in Vercel Project Settings > Environment Variables for Production (and Preview if needed).
+4. In MongoDB Atlas, add access for Vercel deployments (the simplest option is `0.0.0.0/0` with a strong database user password), then redeploy.
+5. Open `https://your-domain.vercel.app/admin` to manage the portfolio.
+
+Never commit `.env.local` or real credentials in `.env.example`.
+
 <div align="center">
   <h1>✨ Shakhawat Bijoy Portfolio ✨</h1>
   <p><strong>A cutting-edge portfolio showcasing modern web development with Next.js 14</strong></p>
@@ -182,8 +196,7 @@ export const socialMedia = [...]     // Social links
 ```css
 /* Modify CSS variables for colors */
 :root {
-  --background: ...
-  --foreground: ...
+  --background: ... --foreground: ...;
 }
 ```
 

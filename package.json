@@ -2,6 +2,9 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,6 +24,7 @@
     "framer-motion": "^11.11.1",
     "lucide-react": "^0.365.0",
     "mini-svg-data-uri": "^1.4.4",
+    "mongodb": "^7.6.0",
     "motion": "^12.23.6",
     "next": "14.1.4",
     "next-themes": "^0.3.0",

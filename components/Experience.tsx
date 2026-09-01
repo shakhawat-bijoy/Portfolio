@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
-import { workExperience } from "@/data";
+import { PortfolioContent } from "@/lib/content";
 import { Button } from "./ui/MovingBorders";
 
-const Experience = () => {
+const Experience = ({ workExperience }: { workExperience: PortfolioContent["workExperience"] }) => {
   // Memoize the gradient style to prevent recreation on every render
   const gradientStyle = useMemo(() => ({
     background: "rgb(4,7,29)",
@@ -11,7 +11,7 @@ const Experience = () => {
   }), []);
 
   // Memoize the button class to prevent string concatenation on every render
-  const buttonClassName = useMemo(() => 
+  const buttonClassName = useMemo(() =>
     "flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 pointer-events-none",
     []
   );

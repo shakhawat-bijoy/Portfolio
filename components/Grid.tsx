@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
-import { gridItems } from "@/data";
+import { PortfolioContent } from "@/lib/content";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
-const Grid = () => {
+const Grid = ({ items }: { items: PortfolioContent["gridItems"] }) => {
   // Memoize the grid items to prevent unnecessary prop drilling on every render
-  const memoizedGridItems = useMemo(() => gridItems, []);
-  
+  const memoizedGridItems = useMemo(() => items, [items]);
+
   // Memoize the BentoGrid className to prevent string recreation
   const bentoGridClassName = useMemo(() => "w-full md:py-20 py-8", []);
 
